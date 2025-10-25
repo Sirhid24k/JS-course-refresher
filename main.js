@@ -140,3 +140,25 @@ fetchData()
   .catch(error => {
     console.error(error);
   });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Async/Await
+async function fetchDataWithAsync() {
+  try {
+    const res = await fetchData();
+    const data = await res;
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+// Calling the async function
+fetchDataWithAsync();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Modules (Imports)
+import subtract, { PI, add } from './module.js';
+
+console.log(PI);
+console.log(add(5, 3));
+console.log(subtract(10, 4));
