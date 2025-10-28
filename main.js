@@ -188,3 +188,30 @@ console.log(returnsTrue, returnsSomething);
 const amount = 0;
 const count = amount ?? 10; // count will be 0, not 10
 console.log(count);
+
+// Optional Chaining (?.) Operator, allows safe access to deeply nested object properties
+const user = {
+  id: 2345678,
+  profile: {
+    name: 'John',
+    premiumUser: true,
+  },
+};
+console.log(user.profile?.premiumUser);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Array Methods
+// Map Method
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const doubledNumbers = numbers.map(num => num * 2);
+console.log(doubledNumbers);
+
+// Filter Method
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+const oddNumbers = numbers.filter(num => num % 2 === 1);
+console.log(evenNumbers);
+console.log(oddNumbers);
+
+// Reduce Method
+const sumOfNumbers = numbers.reduce((acc, currValue) => acc + currValue, 0);
+console.log(sumOfNumbers);
