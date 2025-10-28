@@ -162,3 +162,29 @@ import subtract, { PI, add } from './module.js';
 console.log(PI);
 console.log(add(5, 3));
 console.log(subtract(10, 4));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Ternary Operator
+const wage = 1100;
+const canApplyForLoan =
+  wage >= 1000 ? 'Eligible for loan' : 'Not eligible for loan';
+console.log(canApplyForLoan);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Logical Operators and Short-Circuiting
+// AND (&&) Operator, returns true if both operands are true, short-circuits if the first operand is false
+const isLoggedIn = false;
+const hasPremiumAccount = true;
+const eligibleForDiscount = isLoggedIn && hasPremiumAccount;
+console.log(eligibleForDiscount);
+
+// OR (||) Operator, returns true if at least one operand is true, short-circuits if the first operand is true
+const returnsTrue = true || 'Something';
+const returnsSomething = 'Something' || true;
+console.log(returnsTrue, returnsSomething);
+
+// Nullish Coalescing (??) Operator, only null and undefined are considered nullish, 0 and '' are valid values
+// Works similarly to OR (||) operator but only considers null and undefined as falsy values
+const amount = 0;
+const count = amount ?? 10; // count will be 0, not 10
+console.log(count);
