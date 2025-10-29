@@ -215,3 +215,8 @@ console.log(oddNumbers);
 // Reduce Method
 const sumOfNumbers = numbers.reduce((acc, currValue) => acc + currValue, 0);
 console.log(sumOfNumbers);
+
+// Sort Method
+const unsortedNumbers = [4, 2, 9, 1, 5, 6];
+const sortedNumbersAsc = unsortedNumbers.sort((a, b) => a - b);
+console.log(sortedNumbersAsc);
