@@ -46,7 +46,7 @@ const studentsLogs = [
     checkedIn: true,
   },
 ];
-
+/*
 const [student1, student2, student3, student4] = studentsLogs;
 console.log(student1.name);
 console.log(student2.age);
@@ -218,5 +218,13 @@ console.log(sumOfNumbers);
 
 // Sort Method
 const unsortedNumbers = [4, 2, 9, 1, 5, 6];
-const sortedNumbersAsc = unsortedNumbers.sort((a, b) => a - b);
-console.log(sortedNumbersAsc);
+// Ascending Order
+const sortedNumbersAsc = unsortedNumbers.slice().sort((a, b) => a - b);
+// Descending Order
+const sortedNumbersDes = unsortedNumbers.slice().sort((a, b) => b - a);
+console.log(unsortedNumbers, sortedNumbersAsc, sortedNumbersDes);
+*/
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+fetch('https://jsonplaceholder.typicode.com/todos')
+  .then(res => res.json())
+  .then(data => console.log(data));
