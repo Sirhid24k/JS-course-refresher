@@ -225,6 +225,14 @@ const sortedNumbersDes = unsortedNumbers.slice().sort((a, b) => b - a);
 console.log(unsortedNumbers, sortedNumbersAsc, sortedNumbersDes);
 */
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-fetch('https://jsonplaceholder.typicode.com/todos')
-  .then(res => res.json())
-  .then(data => console.log(data));
+// Asynchronous JavaScript - Promises and Fetch API
+// fetch('https://jsonplaceholder.typicode.com/todos')
+//   .then(res => res.json())
+//   .then(data => console.log(data.filter(user => user.userId === 1)));
+
+// Asynchronous JavaScript - Async/Await
+async function getTodos() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+  const data = await res.json();
+  console.log(data.filter(user => user.userId === 1));
+}
