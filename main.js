@@ -236,3 +236,4 @@ async function getTodos() {
   const data = await res.json();
   console.log(data.filter(user => user.userId === 1));
 }
+getTodos();
