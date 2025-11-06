@@ -231,9 +231,25 @@ console.log(unsortedNumbers, sortedNumbersAsc, sortedNumbersDes);
 //   .then(data => console.log(data.filter(user => user.userId === 1)));
 
 // Asynchronous JavaScript - Async/Await
+const button = document.querySelector('.btn');
+const container = document.querySelector('main');
+
+button.addEventListener('click', getTodos);
+
 async function getTodos() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos');
   const data = await res.json();
-  console.log(data.filter(user => user.userId === 1));
+
+  const userTodos = data.filter(user => user.userId === 1);
+  userTodos.forEach(todo => {
+    const html = `
+    <section class="todo">
+      <h2>User: <span class="user-id">${todo.id}</span></h2>
+      <h2>Task Completed: <span class="completed">${todo.completed}</span></h2>
+      <h2>Task/Title: <span class="task">${todo.title}</span></h2>
+    </section>
+    `;
+
+    container.insertAdjacentHTML('beforeend', html);
+  });
 }
-getTodos();
