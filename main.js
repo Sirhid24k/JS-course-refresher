@@ -234,8 +234,8 @@ console.log(unsortedNumbers, sortedNumbersAsc, sortedNumbersDes);
 const button = document.querySelector('.btn');
 const container = document.querySelector('main');
 
-button.addEventListener('click', testingClicking);
-// button.addEventListener('click', getTodos);
+// button.addEventListener('click', testingClicking);
+button.addEventListener('click', getTodos);
 
 async function getTodos() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos');
@@ -245,9 +245,9 @@ async function getTodos() {
   userTodos.forEach(todo => {
     const html = `
     <section class="todo">
-      <h2>User: <span class="user-id">${todo.id}</span></h2>
-      <h2>Task Completed: <span class="completed">${todo.completed}</span></h2>
-      <h2>Task/Title: <span class="task">${todo.title}</span></h2>
+      <h3>User: <span class="user-id">${todo.id}</span></h3>
+      <h3>Task Completed: <span class="completed">${todo.completed}</span></h3>
+      <h3>Task/Title: <span class="task">${todo.title}</span></h3>
     </section>
     `;
 
