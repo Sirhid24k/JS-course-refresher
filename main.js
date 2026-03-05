@@ -145,8 +145,8 @@ fetchData()
 // Async/Await
 async function fetchDataWithAsync() {
   try {
-    const res = await fetchData();
-    const data = await res;
+    const response = await fetch(URL);
+    const data = await response.json();
     console.log(data);
   } catch (error) {
     console.log(error);
@@ -173,8 +173,8 @@ console.log(canApplyForLoan);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Logical Operators and Short-Circuiting
 // AND (&&) Operator, returns true if both operands are true, short-circuits if the first operand is false
-const isLoggedIn = false;
-const hasPremiumAccount = true;
+const isLoggedIn = true;
+const hasPremiumAccount = false;
 const eligibleForDiscount = isLoggedIn && hasPremiumAccount;
 console.log(eligibleForDiscount);
 
@@ -234,7 +234,8 @@ console.log(unsortedNumbers, sortedNumbersAsc, sortedNumbersDes);
 const button = document.querySelector('.btn');
 const container = document.querySelector('main');
 
-button.addEventListener('click', getTodos);
+button.addEventListener('click', testingClicking);
+// button.addEventListener('click', getTodos);
 
 async function getTodos() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos');
@@ -252,4 +253,8 @@ async function getTodos() {
 
     container.insertAdjacentHTML('beforeend', html);
   });
+}
+
+function testingClicking() {
+  alert('Button was clicked!!');
 }

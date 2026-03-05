@@ -1,4 +1,4 @@
-// Function declarations
+// Function Declarations
 function doSomethingCool() {
   // Return keyword is always explicit
   return 'Something Cool';
@@ -6,7 +6,7 @@ function doSomethingCool() {
 
 // Function Expressions
 const doAnotherCoolThing = function () {
-  // Same with function decalarations
+  // Same with function declarations
   return 'Another Cool Thing';
 };
 
